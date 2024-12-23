@@ -1,3 +1,4 @@
+// change LuUser2 to LuUser
 import { LuUser } from 'react-icons/lu';
 
 function UserIcon() {
