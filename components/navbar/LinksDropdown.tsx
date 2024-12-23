@@ -16,7 +16,8 @@ import { SignedIn, SignedOut, SignInButton, SignUpButton } from '@clerk/nextjs';
 function LinksDropdown() {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger>
+      {/* asChild is used to pass the component as a child to the DropdownMenuTrigger */}
+      <DropdownMenuTrigger asChild>
         <Button variant="outline" className="flex items-center">
           <UserIcon />
           <LuAlignLeft className="ml-2" />
