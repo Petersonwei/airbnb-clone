@@ -1,7 +1,7 @@
 'use client';
 
 import { useFormState } from 'react-dom';
-import { useEffect } from 'react';
+import { useActionState, useEffect } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { actionFunction } from '@/utils/types';
 
@@ -17,7 +17,7 @@ function FormContainer({
   children: React.ReactNode;
 }) {
   //FIXME:No sure to use useFormState or useActionState
-  const [state, formAction] = useFormState(action, initialState);
+  const [state, formAction] = useActionState(action, initialState);
   const { toast } = useToast();
   useEffect(() => {
     if (state.message) {
